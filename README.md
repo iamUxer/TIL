@@ -19,3 +19,7 @@
 * [JS30 : 03.Playing with CSS Variables and JS](JS30/03%20-%20CSS%20Variables/index-START.html) - 2018.11.08. Thu
 
 SCSS 변수로 스타일 값을 지정하고 이벤트리스너를 통해 변화된 값 매창하기
+
+* [JS30 : 04.Array Cardio Day 1](JS30/04%20-%20Array%20Cardio%20Day%201/index-START.html) - 2018.11.12. Tue
+
+Array 관련 메서드 사용 방법
