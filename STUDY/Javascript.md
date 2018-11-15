@@ -1,6 +1,6 @@
 # JS
 
-#### 2018년 11월 10일 2주차
+#### 2018년 11월 10일 2주차 복습
 
 ## Truthy, Falsy
 > Truthy 값은 Boolean 논리적 연산자를 통해 값이 참으로 간주되는 것.
@@ -117,3 +117,38 @@ setInterval(function() {
 }, 지연시간);
 ```
 
+#### 2018년 11월 10일 3주차 예습
+
+## 값 (value)
+> 값은 데이터고 타입이 있다.
+```
+1. undefined
+2. null
+3. boolean - true, false
+4. number - 1, 2, 0.3, NaN, infinity, -infinity..
+5. string - a, b, \n..
+6. symbol
+7. object - function(){}, [], {}, /a/
+```
+## 식 (expression)
+> 연산을 실행했을 때 값을 반환하는 표현식? 그 값은 변수에 할당될 수 있다.
+```
+console.log(a+1);
+```
+## 문 (statement)
+> 변수에 할당 될 수 없는 연산이 아닌 구문
+```
+1.변수 선언문
+    var a;
+2.변수 할당문
+    a = 0;
+3.함수 선언문
+    function x(){}
+4.조건문
+    if(a < 1){}
+5.반복문
+    for(a > -3){}
+6.함수 호출문
+    x();
+7. ...
+```
