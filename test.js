@@ -21,3 +21,19 @@ function func1(a, b, c) {
   }
   
   func1(1, 2, 3);
+
+
+//   a = 1;
+
+//   console.log(a);
+//   newFunc();
+
+//   var a;
+
+//   function newFunc(){
+//       console.log('hoisting');
+//   }
+
+var user = 'yuri';
+
+console.log(`My name is ${user}`);
