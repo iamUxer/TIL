@@ -23,3 +23,7 @@
 * [JS30 : 04.Array Cardio Day 1](JS30/04%20-%20Array%20Cardio%20Day%201/index-START.html) - 2018.11.12. Tue
 
 > Array 관련 메서드 사용 방법
+
+* [JS30 : 05.Flex Panel Gallery](JS30/05%20-%20Flex%20Panel%20Gallery/index-START.html) - 2018.11.16. Fri
+
+> 이벤트가 일어났을 때, 클래스 토글하기. CSS Flex 관련 속성 이해하기. e.propertyName
