@@ -3,8 +3,11 @@
 꾸준히 매일 매일 습관처럼 공부하기
 
 # 복습 / 예습
-* [Javascript](STUDY/Javascript.md)
-* [EcmaScript 2016](STUDY/ES6.md)
+* [Javascript](STUDY/Javascript.md#var)
+* [EcmaScript 2016](STUDY/ES6.md#arrow%20function)
+
+# 숙제
+* [EcmaScript 2016](STUDY/20181117-test.js)
 
 # Javascript30.com
 
