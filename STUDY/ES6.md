@@ -20,6 +20,8 @@ console.log(`My name is ${user}`);
 > My name is yuri
 ```
 
+#### 2018년 11월 17일 3주차 복습
+
 ## let & const
 > 두 타입 모두 재선언이 불가능하다.
 > let은 선언 후에 할당이 가능하고, 재할당 또한 가능하다.
