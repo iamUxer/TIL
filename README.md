@@ -7,7 +7,7 @@
 * [EcmaScript 2016](STUDY/ES6.md#arrow%20function)
 
 # 숙제
-* [EcmaScript 2016](STUDY/20181117-test.js)
+* [생성자 함수](STUDY/20181117-test.js)
 
 # Javascript30.com
 
