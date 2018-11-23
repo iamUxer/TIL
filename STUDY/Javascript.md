@@ -7,7 +7,7 @@
 
 > Falsy 값은 Boolean 논리적 연산자를 통해 값이 거짓으로 간주되는 것.
 ``` 
-- false 값 반환 상황 -
+- Falsy -
     if (false)
     if (null)
     if (undefined)
@@ -152,3 +152,15 @@ console.log(a+1);
     x();
 7. ...
 ```
+
+
+## var
+> 
+
+## 함수 단위 scope
+## null & undefined
+## TDZ
+## array.prototype (map, filter, reduce, sort)
+## 객체 속성 접근자 (property accessor)
+## 생성자 함수
+## new 키워드

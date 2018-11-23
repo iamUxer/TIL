@@ -19,3 +19,9 @@ console.log(`My name is ${user}`);
 
 > My name is yuri
 ```
+
+## let & const
+## arrow function
+## includes
+## array destructuring
+## 블록 레벨 scope

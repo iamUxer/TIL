@@ -27,3 +27,7 @@
 * [JS30 : 05.Flex Panel Gallery](JS30/05%20-%20Flex%20Panel%20Gallery/index-START.html) - 2018.11.16. Fri
 
 > 이벤트가 일어났을 때, 클래스 토글하기. CSS Flex 관련 속성 이해하기. e.propertyName
+
+* [JS30 : 06.Type Ahead](JS30/06%02-%02Type%02Ahead/index-START.html) - 2018.11.23. Fri
+
+> 다소 복잡해서 다시 한번 복습해야함..
