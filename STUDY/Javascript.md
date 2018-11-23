@@ -153,14 +153,159 @@ console.log(a+1);
 7. ...
 ```
 
+#### 2018년 11월 17일 3주차 복습
 
 ## var
-> 
+> 선언하고자 하는 이름으로 변수를 선언함, 값의 재할당이 가능하다.
+```
+var variation;
+```
 
 ## 함수 단위 scope
+> 함수안에서 유효범위를 갖는다. 
+```
+var a = 1;
+
+function outer(){
+    console.log(a); //위의 a 참조 1
+
+    function inner(){
+        console.log(a);  //호이스팅 발생 var a; > undefined
+        var a = 3;
+    }
+
+    inner(); // undefined
+
+    console.log(a); //같은 유효범위에 있는 바깥 a 참조 1
+}
+
+outer(); // 1, undefined, 1
+
+console.log(a); //1
+
+> 1
+> undefined
+> 1
+> 1
+```
 ## null & undefined
-## TDZ
+> null은 선언과 할당이 되었지만, 값이나 자료형이 없다.
+```
+var foo = null;
+fool
+
+> null
+```
+> undefined는 선언은 되었지만 값이 할당되지 않았다.
+```
+var foo;
+foo;
+
+> undefined
+```
+> null과 undefined의 차이점
+```
+* 동등연산자 == 는 형변환을 일으키는 것에 주의
+
+typeof null          // "object" (not "null" for legacy reasons)
+typeof undefined     // "undefined"
+null === undefined   // false
+null  == undefined   // true
+null === null        // true
+null == null         // true
+!null                // true
+isNaN(1 + null)      // false
+isNaN(1 + undefined) // true
+```
+## TDZ(temporal dead zone)
+> 
+
 ## array.prototype (map, filter, reduce, sort)
+> prototype 이란 해당 객체의 원형 객체로 메소드가 명시되어 있고, 새로운 기능을 만들어서 내장시킬 수 있다. 콘솔창에는 __proto__ 로 표시된다.
+
+> array.map()는 가지고 있는 배열의 모든 요소를 함수로 실행시켜 값을 반환하여 그 값을 모아 새로운 배열을 만들어 반환시킨다.
+```
+const fooArray = [1, 2, 3];
+
+const doubles = fooArray.map(x => { 
+    return x * 2
+});
+
+console.log(dougles);
+
+> [2, 4, 6]
+```
+
+> array.filter()는 배열의 각 요소를 판별 함수로 통과시켜 새로운 배열로 반환한다.
+```
+const fooArray = [1, 2, 3];
+
+const boolean = fooArray.filter(x => { 
+    return x < 4
+});
+
+console.log(boolean);
+
+> [1, 2, 3]
+```
+
+> array.reduce()는 왼쪽 요소에서 오른쪽 요소를 누적합산하여 단일 값으로 반환한다.
+```
+const array = [1, 2, 3, 4, 5];
+const reducer = (paramA, paramB) => {
+    return paramA + paramB
+};
+
+console.log(array.reduce(reducer));
+
+console.log(array.reduce(reducer, 5)); //초기값 5;
+
+> 15
+> 20
+```
+
+> array.sort()는 왼쪽 요소와 오른쪽 요소를 비요하여 조건에 따라 해당 배열을 재정렬한다. 새로운 배열로 반환하는 것이 아닌, 해당 배열을 직접 재정렬한다.
+
+```
+var numbers = [4, 2, 5, 1, 3];
+numbers.sort(function(a, b) {
+  return a - b;  // 오름차순 정렬
+});
+console.log(numbers);
+
+> [1, 2, 3, 4, 5]
+
+return b - a는 내림차순
+
+if( a > b )와 같이 비교연산의 경우 조건에 만족했을 때,
+return값으로 -1(음수)이면 a를 b보다 낮은 색인으로 정렬
+return값으로 1(양수)이면 a를 b보다 높은 색인으로 정렬
+```
+
 ## 객체 속성 접근자 (property accessor)
+> array.in
+
 ## 생성자 함수
-## new 키워드
+> new 키워드로 객체를 생성하는 함수이고, 이름이 대문자로 시작하는 것을 규칙으로 한다.
+```
+function Student(name){
+        this.name = name;
+    }
+    
+const student = new Student('Yuri');
+
+console.log(student.name);
+```
+
+## new 키워드? new 연산자
+> 객체를 위한 공간을 따로 만들고 this 키워드가 해당 공간을 의미하도록 만듬?
+> 사용자 정의 객체 타입 또는 내장 객체 타입의 인스턴스를 생성한다.
+
+```
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+var foo = new Person('Lee', 29);
+```
