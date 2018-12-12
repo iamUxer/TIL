@@ -4,7 +4,7 @@
 
 # 복습 / 예습
 * [Javascript](STUDY/Javascript.md#var)
-* [EcmaScript 2016](STUDY/ES6.md#let--const)
+* [EcmaScript 2015](STUDY/ES6.md#let--const)
 
 # 숙제
 * [생성자 함수](STUDY/20181117-test.js)

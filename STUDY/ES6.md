@@ -1,6 +1,6 @@
 # ES6
 
-#### 2018년 11월 10일 2주차
+# 2018년 11월 10일 2주차
 
 ## default parameter
 > 함수 몸통에 전달시킬 매개 변수, 값이 없을 때는 undefined로 간주된다.
@@ -20,7 +20,7 @@ console.log(`My name is ${user}`);
 > My name is yuri
 ```
 
-#### 2018년 11월 17일 3주차 복습
+# 2018년 11월 17일 3주차 복습
 
 ## let & const
 > 두 타입 모두 재선언이 불가능하다.
@@ -101,4 +101,8 @@ undefined
 > b
 20
 ```
+
+# 2018년 11월 28일 4주차 복습
+
+## Lexical scope
 

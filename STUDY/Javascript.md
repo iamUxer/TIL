@@ -314,7 +314,7 @@ var foo = new Person('Lee', 29);
 # 2018년 11월 28일 4주차 복습
 
 ## This
-> 일반적으로 메소드를 호출한 객체가 저장되어 있는 속성
+> 일반적으로 메소드를 호출한 객체가 저장되어 있는 속성, 함수를 호출한 방법이 결정한다. 함수를 호출할 때 마다 다를 수 있다.ㄴ
 ## Prototype
 > 자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 Prototype 객체와 연결되어 있고 프로퍼티 또는 매소드를 상속받아 사용할 수 있다.
 자신의 부모 객체를 가리키고 있다. 프로토타입은 객체가 생성될 때 결정된다. 
@@ -326,7 +326,21 @@ var foo = new Person('Lee', 29);
 
 
 ## this의 모든 케이스 만들기 http://beomy.tistory.com/6
-> 일반 함수에서 this > window
+> 일반 함수에서 this > window 전역객체
+```
+function sum(a, b){
+    console.log(this === window);
+    this.myNumber = 20;
+    return a + b;
+}
+
+console.log(sum(15, 16));
+window.myNumber;
+
+>true
+> 31
+> 20
+```
 > 중첩 함수에서 this > window
 > 이벤트에서 this > 이벤트 객체
 > 메소드에서 this > 메소드 객체
