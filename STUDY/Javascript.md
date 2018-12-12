@@ -314,16 +314,10 @@ var foo = new Person('Lee', 29);
 # 2018년 11월 28일 4주차 복습
 
 ## This
-> 일반적으로 메소드를 호출한 객체가 저장되어 있는 속성, 함수를 호출한 방법이 결정한다. 함수를 호출할 때 마다 다를 수 있다.ㄴ
+> 일반적으로 메소드를 호출한 객체가 저장되어 있는 속성, 함수를 호출한 방법이 결정한다. 함수를 호출할 때 마다 다를 수 있다.
 ## Prototype
 > 자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 Prototype 객체와 연결되어 있고 프로퍼티 또는 매소드를 상속받아 사용할 수 있다.
 자신의 부모 객체를 가리키고 있다. 프로토타입은 객체가 생성될 때 결정된다. 
-
-# 2018년 12월 15일 5주차 예습
-
-## call / apply / bind
-## Closure
-
 
 ## this의 모든 케이스 만들기 http://beomy.tistory.com/6
 > 일반 함수에서 this > window 전역객체
@@ -341,8 +335,42 @@ window.myNumber;
 > 31
 > 20
 ```
-> 중첩 함수에서 this > window
+> 일반 중첩 함수에서 this > window
+```
+var data = 10;
+function outer(){
+    function inner(){
+        this.data = 20; //== window.data
+        data = 30; // 선생님 질문.. 이해 안됨..
+
+        console.log("1. data = " + data);
+        console.log("2. this.data = " + this.data);
+        console.log("3. window.data = " + window.data);
+    }
+    inner();
+}
+
+outer();
+
+>1. data = 
+>2. this.data = 
+>3. window.data =
+
+var data = 10;
+
+```
+
+
 > 이벤트에서 this > 이벤트 객체
 > 메소드에서 this > 메소드 객체
 > 메소드 내부의 중첩 함수에서 this > window
 ## prototype 메서드 만들기
+```
+
+```
+# 2018년 12월 15일 5주차 예습
+
+## call / apply / bind
+## Closure
+
+
