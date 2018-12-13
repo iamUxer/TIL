@@ -3,8 +3,8 @@
 꾸준히 매일 매일 습관처럼 공부하기
 
 # 복습 / 예습
-* [Javascript](STUDY/Javascript.md#var)
-* [EcmaScript 2015](STUDY/ES6.md#let--const)
+* [Javascript](STUDY/Javascript.md#2018년-11월-28일-4주차-복습)
+* [EcmaScript 2015](STUDY/ES6.md#Lexical-scope)
 
 # 숙제
 * [생성자 함수](STUDY/20181117-test.js)

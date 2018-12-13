@@ -341,7 +341,7 @@ var data = 10;
 function outer(){
     function inner(){
         this.data = 20; //== window.data
-        data = 30; // 선생님 질문.. 이해 안됨..
+        data = 30; // 선생님 질문.. 이해 안됨..호이스팅?
 
         console.log("1. data = " + data);
         console.log("2. this.data = " + this.data);
@@ -360,17 +360,133 @@ var data = 10;
 
 ```
 
+> 이벤트 리스너의 this > 이벤트 객체
+```
+var data = 10;
+$("#myButton").click(function(){
+    this.data = 20; // #myButton
+    data = 30; // window
 
-> 이벤트에서 this > 이벤트 객체
+    console.log("1. data = " + data);
+    console.log("2. this.data = " + this.data);
+    console.log("3. window.data = " + window.data);
+});
+
+>1. data = 30
+>2. this.data = 20
+>3. window.data = 30
+```
 > 메소드에서 this > 메소드 객체
-> 메소드 내부의 중첩 함수에서 this > window
-## prototype 메서드 만들기
+```
+var data = 10; //30
+function MyClass (){
+    this.data = 0; // 이게 20으로 바뀌는 건가?
+}
+MyClass.prototype.method1 = function (){
+    this.data = 20;
+    data = 30;
+
+    console.log("1. data = " + data);
+    console.log("2. this.data = " + this.data);
+    console.log("3. window.data = " + window.data);
+}
+
+var my1 = new MyClass();
+my1.method1();
+
+>1. data = 30
+>2. this.data = 20
+>3. window.data = 30
 ```
 
+
+> 메소드 내부의 중첩 함수에서 this > window
+```
+var data = 10;
+function MyClass(){
+    this.data = 0;
+}
+MyClass.prototype.method1 = function(){
+    function inner(){
+        this.data = 20;
+        data = 30;
+
+        console.log("1. data = " + data);
+        console.log("2. this.data = " + this.data);
+        console.log("3. window.data = " + window.data);
+    }
+    inner(); 
+}
+
+var my1 = new MyClass();
+my1.method1();
+
+>1. data = 30
+>2. this.data = 30
+>3. window.data = 30
+```
+## prototype 메서드 만들기
+```
+var string = {};
+string.__proto__.myname = function(){
+    console.log('Gu yuri');
+}
+
+string.myname();
+
+> Gu yuri
 ```
 # 2018년 12월 15일 5주차 예습
 
 ## call / apply / bind
-## Closure
+> call 메서드는 함수의 this 객체를 원래 컨텐스트에서 지정해준 새로운 객체로 변경할 수 있다. 서로 다른 this객체가 기존 함수를 호출 할 때 할당될 수 있다.
+```
+func.call([지정객체][, 인수1[, 인수2[, ...]]])
 
+func : 가져다 쓸 메소드
+지정객체(선택사항) : 현재 객체로 사용될 객체
+인수1, 인수2, 인수N(선택사항) : 메소드에 전달될 인수 목록
+```
+
+> apply 메서드는 call 메서드와 용도는 같지만 여러 개의 인자를 받는 대신 인자 배열 하나를 받는다.
+
+> bind 메서드는 .....
+
+## Closure
+> 클로저 = 함수 + 함수의 렉시컬 환경(선언할때 결정되는 > 범위 안에 있는 여러 지역 변수)
+
+> 내부함수 vs. 클로저
+```
+1. 내부함수
+
+function outer() {
+    var outerText = "내부 함수";
+    function inner() { 
+        console.log(outerText);
+    }
+    inner();
+}
+outer();
+
+> 내부 함수
+
+2. 클로저
+
+function outer() {
+    var outerText = "클로저";
+    function inner() {
+        console.log(outerText);
+    }
+    return inner; //실행이 아닌 함수를 리턴
+}
+//함수 안의 지역 변수들은 그 함수가 수행되는 동안에만 존재한다.
+
+var myClosure = outer();
+myClosure(); //inner 함수를 실행한 결과 저장
+
+outer(); // inner함수를 리턴한다.
+
+> 클로저
+
+```
 

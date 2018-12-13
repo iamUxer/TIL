@@ -55,3 +55,12 @@ foo.sayHello();
 var newFoo = new Person('Kim', 31);
 
 newFoo.sayHello();
+
+// function sum(a, b){
+//     console.log(this === window);
+//     this.myNumber = 20;
+//     return a + b;
+// }
+
+// console.log(sum(15, 16));
+// window.myNumber;
