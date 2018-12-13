@@ -34,3 +34,12 @@
 * [JS30 : 06.Type Ahead](JS30/06%20-%20Type%20Ahead/index-START.html) - 2018.11.23. Fri
 
 > 다소 복잡해서 다시 한번 복습해야함..
+
+전역공간에서 window/ global
+함수내부에서 window/ global
+메소드 호출시 메소드 호출 주체(메소드명 앞)
+명시적인 this 바인딩 - call / apply / bind
+callback에서 - 기본적으로는 함수내부에서와 동일
+생성자함수에서 - 인스턴스
+내부함수에서의 우회법 - 상위스코프에서 'var self = this'
+이벤트 함수에서 - 발생 이벤트
