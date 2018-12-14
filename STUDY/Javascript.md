@@ -310,9 +310,6 @@ function Person(name, age){
 var foo = new Person('Lee', 29);
 ```
 
-<<<<<<< HEAD
-=======
-
 # 2018년 11월 28일 4주차 복습
 
 ## This
@@ -502,7 +499,6 @@ outer(); // inner함수를 리턴한다.
 
 ```
 
-<<<<<<< HEAD
 =======
 ## this의 모든 케이스 만들기 http://beomy.tistory.com/6
 > 일반 함수에서 this > window
@@ -511,5 +507,4 @@ outer(); // inner함수를 리턴한다.
 > 메소드에서 this > 메소드 객체
 > 메소드 내부의 중첩 함수에서 this > window
 ## prototype 메서드 만들기
->>>>>>> a3bbb0a61b772da8caecc32cbf25f268c50c972a
 >>>>>>> 7e563881f9cec8238823cad9323d23f34296d742
