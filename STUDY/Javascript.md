@@ -322,6 +322,17 @@ var foo = new Person('Lee', 29);
 자신의 부모 객체를 가리키고 있다. 프로토타입은 객체가 생성될 때 결정된다. 
 
 ## this의 모든 케이스 만들기 http://beomy.tistory.com/6
+```
+전역공간에서 > window/ global
+함수내부에서 > window/ global
+메소드 호출시 메소드 호출 주체(메소드명 앞)
+명시적인 this 바인딩 - call / apply / bind???
+callback에서 - 기본적으로는 함수내부에서와 동일
+생성자함수에서 - 인스턴스
+내부함수에서의 우회법 - 상위스코프에서 'var self = this'
+이벤트 함수에서 - 발생 이벤트
+```
+
 > 일반 함수에서 this > window 전역객체
 ```
 function sum(a, b){
@@ -400,7 +411,6 @@ my1.method1();
 >2. this.data = 20
 >3. window.data = 30
 ```
-
 
 > 메소드 내부의 중첩 함수에서 this > window
 ```
