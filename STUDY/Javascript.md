@@ -310,7 +310,7 @@ function Person(name, age){
 var foo = new Person('Lee', 29);
 ```
 
-## 객체를 생성하는 방법
+## 객체를 생성하는 방법 (http://victorydntmd.tistory.com/51)
 > 1.객체 리터럴 - 가장 일반적인 {중괄호}를 사용하는 법
 ```
 var person = {
@@ -356,7 +356,7 @@ console.log(person2.name + ", " + person2.email);
 > 자바스크립트의 모든 객체는 자신의 부모 역할을 담당하는 Prototype 객체와 연결되어 있고 프로퍼티 또는 매소드를 상속받아 사용할 수 있다.
 자신의 부모 객체를 가리키고 있다. 프로토타입은 객체가 생성될 때 결정된다. 
 
-## this의 모든 케이스 만들기 http://beomy.tistory.com/6
+## this의 모든 케이스 만들기 (http://beomy.tistory.com/6)
 ```
 전역공간에서 > window/ global
 함수내부에서 > window/ global
