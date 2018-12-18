@@ -46,7 +46,7 @@ name(arg1, arg2, arg3);
 ## declaration
 > 데이터를 할당하기에 앞서 변수명으로 선언하는 것
 
-> 함수는 생성 자체로 선언과 할당이 동시에 일어나는 듯?
+> 함수는 생성 자체로 선언과 할당이 동시에 일어남
 ```
 var variation;
 ```
@@ -86,7 +86,7 @@ const newFunc = function(){
     console.log(a);
     newFunc();
 
-    var a;
+    var a; <------*****선언이 반드시 존재해야한다.
 
     function newFunc(){
         console.log('hoisting');
@@ -288,17 +288,17 @@ return값으로 1(양수)이면 a를 b보다 높은 색인으로 정렬
 ## 생성자 함수
 > new 키워드로 객체를 생성하는 함수이고, 이름이 대문자로 시작하는 것을 규칙으로 한다.
 ```
-function Student(name){
+function Student(name){  // < new 키워드로 객체를 생성하는 함수
         this.name = name;
     }
     
-const student = new Student('Yuri');
+const student = new Student('Yuri'); // < new 키워드로 생성자 함수 호출
 
 console.log(student.name);
 ```
 
-## new 키워드? new 연산자
-> 객체를 위한 공간을 따로 만들고 this 키워드가 해당 공간을 의미하도록 만듬?
+## new 키워드
+> 객체를 위한 공간을 따로 만들고 this 키워드가 해당 공간을 참조하도록 한다.
 > 사용자 정의 객체 타입 또는 내장 객체 타입의 인스턴스를 생성한다.
 
 ```
@@ -308,6 +308,44 @@ function Person(name, age){
 }
 
 var foo = new Person('Lee', 29);
+```
+
+## 객체를 생성하는 방법
+> 1.객체 리터럴 - 가장 일반적인 {중괄호}를 사용하는 법
+```
+var person = {
+    name: "yuri",
+    email: "bonethecomer@gmail.com",
+    birth: "0425",
+}
+```
+
+> 2.생성자 함수 - new 키워드를 이용하여 객체 생성자 함수를 호출하여 빈 객체를 얻는 방식
+```
+var person = new Object(); //생성자 함수 호출
+console.log(person.name); //undefined
+
+person.name = "yuri";
+console.log(person.name);
+
+> yuri
+```
+
+> 3.생성자 함수 - 기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작
+```
+function Person(name, email){
+    this.name = name;
+    this.email = email;
+}
+
+var person1 = new Person("yuri", "bonethecomer@gmail.com");
+var person2 = new Person("lucky", "lucky@gmail.com");
+
+console.log(person1.name + ", " + person1.email);
+console.log(person2.name + ", " + person2.email);
+
+> yuri, bonethecomer@gmail.com
+> lucky, lucky@gmail.com
 ```
 
 # 2018년 11월 28일 4주차 복습
@@ -440,7 +478,7 @@ var string = {};
 string.__proto__.myname = function(){
     console.log('Gu yuri');
 }
-
+           
 string.myname();
 
 > Gu yuri
