@@ -537,12 +537,12 @@ outer(); // inner함수를 리턴한다.
 
 ```
 
-=======
-## this의 모든 케이스 만들기 http://beomy.tistory.com/6
-> 일반 함수에서 this > window
-> 중첩 함수에서 this > window
-> 이벤트에서 this > 이벤트 객체
-> 메소드에서 this > 메소드 객체
-> 메소드 내부의 중첩 함수에서 this > window
-## prototype 메서드 만들기
->>>>>>> 7e563881f9cec8238823cad9323d23f34296d742
+# 2018년 12월 15일 5주차 복습
+
+## some
+
+## every
+
+## Callback
+
+## Array explorer
