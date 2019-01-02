@@ -38,3 +38,11 @@
 * [JS30 : 07. Array Cardio Day 2](JS30/07%20-%20Array%20Cardio%20Day%202/index-START.html) - 2018.11.23. Fri
 
 > Array 관련 메서드 사용 방법 2
+
+* [JS30 : 08. Fun with HTML5 Canvas](JS30/08%20-%20Fun%20with%20HTML5%20Canvas/index-START.html) - 2018.12.24. Mon
+
+> 캔버스 관련 메서드 사용방법 *너무 어려움
+
+* [JS30 : 09. Dev Tools Domination](JS30/09%20-%20Dev%20Tools%20Domination/index-START.html) - 2018.12.24. Mon
+
+> 콘솔관련 메서드 활용 방법
