@@ -34,15 +34,7 @@ console.log(orBoolean);
 ```
 > AND와 OR 모두 논리 값이 존재할 때는 TRUE 또는 FALSE로 반환
 
-## arguments
-> 함수에 전달될 인수들, 배열 형태의 객체. 유사 배열이기 때문에 배열 메소드를 포함하지 않는다.
-```
-function name(a, b, c){
-    구현 로직
-};
 
-name(arg1, arg2, arg3); 
-```
 ## declaration
 > 데이터를 할당하기에 앞서 변수명으로 선언하는 것
 
@@ -57,24 +49,6 @@ var variation = 'value';
 var funcDeclaration = function (){
 
 }
-```
-## function
-> 내부에 기능을 포함하고 있는 객체
-```
-1-1. 함수 선언식 : 익명함수
-function (){
-    구현 로직
-};
-
-1-2. 함수 선언식 : 기명함수
-function name(){
-    구현 로직
-};
-
-2. 함수 표현식
-const newFunc = function(){
-    구현 로직
-};
 ```
 
 ## hoisting
@@ -161,33 +135,7 @@ console.log(a+1);
 var variation;
 ```
 
-## 함수 단위 scope
-> 함수안에서 유효범위를 갖는다. 
-```
-var a = 1;
 
-function outer(){
-    console.log(a); //위의 a 참조 1
-
-    function inner(){
-        console.log(a);  //호이스팅 발생 var a; > undefined
-        var a = 3;
-    }
-
-    inner(); // undefined
-
-    console.log(a); //같은 유효범위에 있는 바깥 a 참조 1
-}
-
-outer(); // 1, undefined, 1
-
-console.log(a); //1
-
-> 1
-> undefined
-> 1
-> 1
-```
 ## null & undefined
 > null은 선언과 할당이 되었지만, 값이나 자료형이 없다.
 ```
@@ -220,133 +168,7 @@ isNaN(1 + undefined) // true
 ## TDZ(temporal dead zone)
 > 
 
-## array.prototype (map, filter, reduce, sort)
-> prototype 이란 해당 객체의 원형 객체로 메소드가 명시되어 있고, 새로운 기능을 만들어서 내장시킬 수 있다. 콘솔창에는 __proto__ 로 표시된다.
 
-> array.map()는 가지고 있는 배열의 모든 요소를 함수로 실행시켜 값을 반환하여 그 값을 모아 새로운 배열을 만들어 반환시킨다.
-```
-const fooArray = [1, 2, 3];
-
-const doubles = fooArray.map(x => { 
-    return x * 2
-});
-
-console.log(dougles);
-
-> [2, 4, 6]
-```
-
-> array.filter()는 배열의 각 요소를 판별 함수로 통과시켜 새로운 배열로 반환한다.
-```
-const fooArray = [1, 2, 3];
-
-const boolean = fooArray.filter(x => { 
-    return x < 4
-});
-
-console.log(boolean);
-
-> [1, 2, 3]
-```
-
-> array.reduce()는 왼쪽 요소에서 오른쪽 요소를 누적합산하여 단일 값으로 반환한다.
-```
-const array = [1, 2, 3, 4, 5];
-const reducer = (paramA, paramB) => {
-    return paramA + paramB
-};
-
-console.log(array.reduce(reducer));
-
-console.log(array.reduce(reducer, 5)); //초기값 5;
-
-> 15
-> 20
-```
-
-> array.sort()는 왼쪽 요소와 오른쪽 요소를 비요하여 조건에 따라 해당 배열을 재정렬한다. 새로운 배열로 반환하는 것이 아닌, 해당 배열을 직접 재정렬한다.
-
-```
-var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
-  return a - b;  // 오름차순 정렬
-});
-console.log(numbers);
-
-> [1, 2, 3, 4, 5]
-
-return b - a는 내림차순
-
-if( a > b )와 같이 비교연산의 경우 조건에 만족했을 때,
-return값으로 -1(음수)이면 a를 b보다 낮은 색인으로 정렬
-return값으로 1(양수)이면 a를 b보다 높은 색인으로 정렬
-```
-
-## 객체 속성 접근자 (property accessor)
-> array.in
-
-## 생성자 함수
-> new 키워드로 객체를 생성하는 함수이고, 이름이 대문자로 시작하는 것을 규칙으로 한다.
-```
-function Student(name){  // < new 키워드로 객체를 생성하는 함수
-        this.name = name;
-    }
-    
-const student = new Student('Yuri'); // < new 키워드로 생성자 함수 호출
-
-console.log(student.name);
-```
-
-## new 키워드
-> 객체를 위한 공간을 따로 만들고 this 키워드가 해당 공간을 참조하도록 한다.
-> 사용자 정의 객체 타입 또는 내장 객체 타입의 인스턴스를 생성한다.
-
-```
-function Person(name, age){
-    this.name = name;
-    this.age = age;
-}
-
-var foo = new Person('Lee', 29);
-```
-
-## 객체를 생성하는 방법 (http://victorydntmd.tistory.com/51)
-> 1.객체 리터럴 - 가장 일반적인 {중괄호}를 사용하는 법
-```
-var person = {
-    name: "yuri",
-    email: "bonethecomer@gmail.com",
-    birth: "0425",
-}
-```
-
-> 2.생성자 함수 - new 키워드를 이용하여 객체 생성자 함수를 호출하여 빈 객체를 얻는 방식
-```
-var person = new Object(); //생성자 함수 호출
-console.log(person.name); //undefined
-
-person.name = "yuri";
-console.log(person.name);
-
-> yuri
-```
-
-> 3.생성자 함수 - 기존 함수에 new 연산자를 붙여서 호출하면 해당 함수는 생성자 함수로 동작
-```
-function Person(name, email){
-    this.name = name;
-    this.email = email;
-}
-
-var person1 = new Person("yuri", "bonethecomer@gmail.com");
-var person2 = new Person("lucky", "lucky@gmail.com");
-
-console.log(person1.name + ", " + person1.email);
-console.log(person2.name + ", " + person2.email);
-
-> yuri, bonethecomer@gmail.com
-> lucky, lucky@gmail.com
-```
 
 # 2018년 11월 28일 4주차 복습
 
@@ -536,12 +358,4 @@ outer(); // inner함수를 리턴한다.
 > 클로저
 
 ```
-
-# 2018년 12월 15일 5주차 복습
-
-## some
-> 배열 안의 요소들을 판별 함수로 테스트하여 "하나라도" 통과되면 true, 아니면 false로 반환한다. 호출한 배열을 변형하지 않는다.
-
-## every
-> 배열 안의 "모든" 요소가 판별 함수를 통과하거나 빈 배열일 경우 true를 반환한다. 호출한 배열을 변형하지 않는다.
 
