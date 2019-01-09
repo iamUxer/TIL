@@ -43,10 +43,14 @@
 
 > 캔버스 관련 메서드 사용방법 *너무 어려움
 
-* [JS30 : 09. Dev Tools Domination](JS30/09%20-%20Dev%20Tools%20Domination/index-START.html) - 2018.12.24. Mon
+* [JS30 : 09. Dev Tools Domination](JS30/09%20-%20Dev%20Tools%20Domination/index-START.html)
 
 > 콘솔관련 메서드 활용 방법
 
-* [JS30 : 10. Hold Shift and Check Checkboxes](JS30/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-START.html) - 2018.12.24. Mon
+* [JS30 : 10. Hold Shift and Check Checkboxes](JS30/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-START.html)
 
 > 키보드 이벤트와 클릭 이벤트가 동시에 일어나는 상황
+
+* [JS30 : 11 - Custom Video Player](JS30/11%20-%20Custom%20Video%20Player/index-START.html)
+
+> 비디오 제어하기
