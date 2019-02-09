@@ -77,25 +77,6 @@ params => {
 
 # 2018년 12월 15일 5주차 복습
 
-## spread operator
-> 전개 연산자 표현식은 2개 이상의 인수(함수 호출용)나 2개 이상의 요소(배열 리터럴 용) 또는 2개 이상의 변수가 예상되는 곳에 확장될 수 있게 한다.
-
-```
-- 배열을 함수의 인수로 사용
-function myFunction(x, y, z) {}
-var args = [1, 2, 3];
-myFunction(...args);
-
-- 배열 리터럴
-var parts = ['shoulders', 'knees'];
-var lyrics = ['head', ...parts, 'and', 'toes];
-
-- new
-```
 
 
-## find
-> 주어진 판별함수를 만족하는 "첫번째 요소"의 값을 반환. 요소가 없으면 undefined 반환.
 
-## findindex
-> 주어진 판별함수를 만족하는 배열의 "첫번째 요소에 대한 인덱스"를 반환한다. 

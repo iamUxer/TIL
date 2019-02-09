@@ -2,12 +2,9 @@
 
 꾸준히 매일 매일 습관처럼 공부하기
 
-# 복습 / 예습
-* [Javascript](STUDY/Javascript.md#2018년-11월-28일-4주차-복습)
-* [EcmaScript 2015](STUDY/ES6.md#2018년-11월-28일-4주차-복습)
+# [01. Object & Array](STUDY/01.object&array.md)
 
-# 숙제
-* [생성자 함수](STUDY/20181117-test.js)
+# [02. Function & Object](STUDY/02.function&object.md)
 
 # Javascript30.com
 
