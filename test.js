@@ -12,16 +12,15 @@
 // function func1(a, b, c) {
 //     console.log(arguments[0]);
 //     // expected output: 1
-  
+
 //     console.log(arguments[1]);
 //     // expected output: 2
-  
+
 //     console.log(arguments[2]);
 //     // expected output: 3
 //   }
-  
-//   func1(1, 2, 3);
 
+//   func1(1, 2, 3);
 
 // //   a = 1;
 
@@ -51,7 +50,6 @@
 
 // foo.sayHello();
 
-
 // var newFoo = new Person('Kim', 31);
 
 // newFoo.sayHello();
@@ -65,6 +63,7 @@
 // console.log(sum(15, 16));
 // console.log(global.myNumber);
 
+<<<<<<< HEAD
 class Foo{
     constructor(){
         this.name = 'foo';
@@ -74,3 +73,10 @@ class Foo{
 const foo = new Foo();
 
 console.log(foo.name);
+=======
+const array1 = [1, 2, 3, 4];
+
+console.log(array1.fill(6, 0, 3));
+
+console.log(array1);
+>>>>>>> 6a73bf8743a266b644537f587d042cfa12900b15
