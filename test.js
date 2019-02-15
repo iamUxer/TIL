@@ -56,11 +56,21 @@
 
 // newFoo.sayHello();
 
-function sum(a, b){
-    console.log(this === global);
-    this.myNumber = 20;
-    return a + b;
+// function sum(a, b){
+//     console.log(this === global);
+//     this.myNumber = 20;
+//     return a + b;
+// }
+
+// console.log(sum(15, 16));
+// console.log(global.myNumber);
+
+class Foo{
+    constructor(){
+        this.name = 'foo';
+    }
 }
 
-console.log(sum(15, 16));
-console.log(global.myNumber);
+const foo = new Foo();
+
+console.log(foo.name);
