@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="#">
+    <script>
+        window.addEventListener('load', function(){            
+            var btnClick = document.getElementById("btn-click");
+
+            btnClick.onclick = function(){
+                var x = prompt('x를 입력하세요', 0);
+                var y = prompt('y를 입력하세요', 0);
+
+                var result = parseInt(x) + parseInt(y);
+
+                btnClick.value = result;
+            }
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="확인" id="btn-click"><br />
+    <img src="">
+    <span>온클릭 테스트</span>
+</body>
+</html>
