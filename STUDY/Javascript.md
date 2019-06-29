@@ -146,7 +146,7 @@ console.log(b); //b는 a를 참조한 것이 아니라 값만 대입받았기 �
 const animals = [ "dog", "cat" ];
 const mypets = animals;
 
-amianls.push("bird");
+animalls.push("bird");
 
 console.log(mypets);
 > ["dog", "cat", "bird"] //배열은 참조 타입의 데이터로 참조하는 주소값의 메모리에 적용된 변화값을 그대로 보여준다.
