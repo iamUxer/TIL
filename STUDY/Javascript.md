@@ -127,6 +127,34 @@ console.log(a+1);
 7. ...
 ```
 
+## Value Type, Reference Type
+> Value Type은 메모리상의 주소 값을 따로 가지지 않고 그저 값으로만 존재한다.
+```js
+let a = 1;
+let b = a; //b는 a의 1을 값으로써 대입받는다.
+
+a = 2;
+
+console.log(b); //b는 a를 참조한 것이 아니라 값만 대입받았기 때문에 값에 변화가 없다.
+> 1
+```
+```
+- num, string, boolean, undefined, NaN, null이 해당
+```
+> Reference Type은 메모리상의 주소 값을 가지고 그것을 참조할 수 있다.
+```js
+const animals = [ "dog", "cat" ];
+const mypets = animals;
+
+amianls.push("bird");
+
+console.log(mypets);
+> ["dog", "cat", "bird"] //배열은 참조 타입의 데이터로 참조하는 주소값의 메모리에 적용된 변화값을 그대로 보여준다.
+```
+```
+- Array, function, Object가 
+```
+
 # 2018년 11월 17일 3주차 복습
 
 ## var
@@ -165,6 +193,9 @@ null == null         // true
 isNaN(1 + null)      // false
 isNaN(1 + undefined) // true
 ```
+
+
+
 ## TDZ(temporal dead zone)
 > 
 
