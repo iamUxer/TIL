@@ -152,7 +152,7 @@ console.log(mypets);
 > ["dog", "cat", "bird"] //배열은 참조 타입의 데이터로 참조하는 주소값의 메모리에 적용된 변화값을 그대로 보여준다.
 ```
 ```
-- Array, function, Object가 
+- Array, function, Object가 해당
 ```
 
 # 2018년 11월 17일 3주차 복습
