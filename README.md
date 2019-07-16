@@ -4,7 +4,7 @@
 # [01. Object & Array](STUDY/01.object&array.md)
 
 # [02. Function & Object](STUDY/02.function&object.md)
-/* * [JS30 : 01.Javascript Drum Kit](JS30/01%20-%20JavaScript%20Drum%20Kit/index-START.html) - 2018.11.05. Mon */
+* [JS30 : 01.Javascript Drum Kit](JS30/01%20-%20JavaScript%20Drum%20Kit/index-START.html) - 2018.11.05. Mon
 # Javascript30.com
 
 * [JS30 : 01.Javascript Drum Kit](JS30/01%20-%20JavaScript%20Drum%20Kit/index-START.html) - 2018.11.05. Mon
