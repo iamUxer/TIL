@@ -24,3 +24,26 @@ const Hello = () => {
 }
 
 ```
+
+##styled Component
+
+```js
+// 변수명으로 선언하여 export해주고 모듈화하여 공통으로 사용가능
+
+//기본 html element
+const myBTN = styled.div`
+  background: red;
+`
+//외부 UI 프레임웤 사용ex
+const myBTN = style(Button)`
+ background: red;
+`
+```
+
+```js
+//모듈화 할때
+
+export const myBTN = styled.div`
+  background: red;
+`
+```
